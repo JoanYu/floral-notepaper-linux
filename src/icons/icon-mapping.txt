@@ -1,0 +1,109 @@
+Icon Mapping: Tauri Inline SVG -> Qt QIcon SVG Files
+===========================================================
+Generated from: floral-notepaper/src/components/MainWindow.tsx and NotePad.tsx
+
+Each entry shows:
+  SVG file          <- Context (button title / tooltip)      [Source file:line]
+  Original icon format replaced
+
+================================================================================
+ICON                                 SVG FILE                    USAGE CONTEXT
+================================================================================
+
+notepad.svg            <- "快捷便签" title bar button           [MainWindow.tsx:965]
+                       Replaces: speech-bubble inline SVG
+                       Used in: title bar (opens notepad window)
+
+settings.svg           <- "设置" title bar button               [MainWindow.tsx:984]
+                       Replaces: gear inline SVG
+                       Used in: title bar (opens settings panel)
+
+window-minimize.svg    <- "最小化" title bar button             [MainWindow.tsx:1008]
+                       Replaces: minimize inline SVG
+                       Used in: title bar window control (non-Linux only)
+
+window-maximize.svg    <- "最大化" title bar button             [MainWindow.tsx:1023]
+                       Replaces: maximize inline SVG
+                       Used in: title bar window control (non-Linux only)
+                       Note: shown when window is NOT maximized
+
+window-restore.svg     <- "还原" title bar button               [MainWindow.tsx:1018]
+                       Replaces: restore inline SVG
+                       Used in: title bar window control (non-Linux only)
+                       Note: shown when window IS maximized
+
+window-close.svg       <- "关闭" title bar button               [MainWindow.tsx:1033]
+                       Replaces: close X inline SVG (viewBox 0 0 12 12)
+                       Used in: title bar window control (non-Linux only)
+
+search.svg             <- Search bar magnifying glass           [MainWindow.tsx:1050]
+                       Replaces: search inline SVG
+                       Used in: sidebar search input
+
+x.svg                  <- "清空搜索" clear button               [MainWindow.tsx:1076]
+                       Replaces: small X inline SVG in search bar
+                       Also used for:
+                       - "从列表移除" external file remove      [MainWindow.tsx:1218]
+                       - "关闭" NotePad close button            [NotePad.tsx:596]
+
+plus.svg               <- "新建笔记" sidebar button             [MainWindow.tsx:1097]
+                       Replaces: plus inline SVG
+                       Also used for:
+                       - "新建分类" category button             [MainWindow.tsx:1142]
+                       Replaces: emoji/text "+" in Qt code
+
+import.svg             <- "导入 Markdown" sidebar button        [MainWindow.tsx:1115]
+                       Replaces: import-arrow inline SVG
+                       Used in: sidebar import button
+
+external-file.svg      <- External file list item icon          [MainWindow.tsx:1204]
+                       Replaces: document-file inline SVG
+                       Used in: sidebar external file entries
+
+chevron-right.svg      <- Category expand/collapse chevron      [MainWindow.tsx:1349]
+                       Replaces: right-pointing chevron inline SVG
+                       Used in: sidebar category headers
+                       Note: rotates 0deg (collapsed) / 90deg (expanded)
+
+chevron-left.svg       <- "返回" back button in note menu       [MainWindow.tsx:1830]
+                       Replaces: left-pointing chevron inline SVG
+                       Used in: note context menu move submenu
+
+folder.svg             <- Category folder icon                  [MainWindow.tsx:1362]
+                       Replaces: folder inline SVG
+                       Used in: sidebar category headers
+
+sidebar.svg            <- "展开侧栏" / "收起侧栏" toggle       [MainWindow.tsx:1505]
+                       Replaces: sidebar-panel inline SVG
+                       Used in: editor toolbar (sidebar toggle)
+
+pin.svg                <- "钉为磁贴" pin button                 [MainWindow.tsx:1528]
+                       Replaces: pushpin inline SVG
+                       Also used for:
+                       - "转为磁贴" NotePad pin button          [NotePad.tsx:576]
+
+undo.svg               <- "撤销（Ctrl+Z）" undo button          [MainWindow.tsx:1551]
+                       Replaces: undo-arrow inline SVG
+                       Used in: editor toolbar
+
+trash.svg              <- "删除笔记" delete button              [MainWindow.tsx:1613]
+                       Replaces: trash-can inline SVG
+                       Used in: editor toolbar
+
+layers.svg             <- "取消置顶" / "窗口置顶" tile button   [NotePad.tsx:519]
+                       Replaces: layers-stack inline SVG
+                       Used in: tile (always-on-top toggle)
+
+================================================================================
+TOTAL: 19 unique SVG icons extracted
+
+NOTES:
+- All SVGs use stroke="currentColor" / fill="currentColor" to inherit color
+  from the Qt stylesheet, matching the Tauri CSS behavior.
+- Original inline SVGs with text/emoji labels in Qt code should be replaced
+  with QIcon::fromTheme() or QIcon(":/icons/<name>.svg") references.
+- Window control icons (minimize/maximize/restore/close) use viewBox="0 0 12 12"
+  to match the original title bar sizing.
+- All other icons use viewBox="0 0 24 24" for consistency.
+- The x.svg icon replaces 3 different inline X/close SVGs that share the same
+  geometric path (two crossed lines) but differed only in stroke-width.

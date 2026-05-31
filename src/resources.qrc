@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/notepad.svg</file>
+        <file>icons/settings.svg</file>
+        <file>icons/window-minimize.svg</file>
+        <file>icons/window-maximize.svg</file>
+        <file>icons/window-restore.svg</file>
+        <file>icons/window-close.svg</file>
+        <file>icons/search.svg</file>
+        <file>icons/x.svg</file>
+        <file>icons/plus.svg</file>
+        <file>icons/import.svg</file>
+        <file>icons/external-file.svg</file>
+        <file>icons/chevron-right.svg</file>
+        <file>icons/chevron-down.svg</file>
+        <file>icons/chevron-left.svg</file>
+        <file>icons/folder.svg</file>
+        <file>icons/sidebar.svg</file>
+        <file>icons/pin.svg</file>
+        <file>icons/undo.svg</file>
+        <file>icons/redo.svg</file>
+        <file>icons/trash.svg</file>
+        <file>icons/layers.svg</file>
+        <file>icons/save.svg</file>
+    </qresource>
+</RCC>

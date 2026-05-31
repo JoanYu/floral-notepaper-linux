@@ -1,0 +1,54 @@
+# Project-specific
+.claude/
+.build/
+data/
+.deepseek/
+
+# Qt / CMake build artifacts
+build*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+*.autogen
+*_autogen_timestamp_deps
+*_autogen
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.lib
+*.exe
+*.app
+*.moc
+*.qrc.depends
+
+# Qt resource files (generated)
+qrc_*.cpp
+qrc_*.cxx
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc
+*.log
+*.pid
+*.seed
+*.coveralls.yml
